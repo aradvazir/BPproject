@@ -14,9 +14,11 @@ def teacher (request):
 
 def student_hw (request):
     Homework= homework.objects.all()
-    validcheck=open('userfile.txt', 'r').read()
-    Answer=answer.objects.filter(student_nu=validcheck)
-    return render(request,'student_hw.html', { 'hw': Homework, 'answer': Answer, 'username': validcheck })
+    validcheck=open('userfile.txt', 'r')
+    d=validcheck.read()
+    validcheck.close()
+    Answer=answer.objects.filter(student_nu=d)
+    return render(request,'student_hw.html', { 'hw': Homework, 'answer': Answer, 'username': d })
 
 def techer_hw(request):
     Homework=homework.objects.all()

@@ -11,7 +11,8 @@ def teacher_login_view(request):
         if form.is_valid():
             user=form.get_user()
             login(request, user)
-            validcheck=open('userfile.txt', 'w').write(user_name)
+            validcheck=open('userfile.txt', 'w')
+            validcheck.write(user_name)
             validcheck.close()
             return redirect('/teacher')
     form=AuthenticationForm()
@@ -24,13 +25,9 @@ def student_login_view(request):
         if form.is_valid():
             user=form.get_user()
             login(request, user)
-            validcheck=open('userfile.txt', 'w').write(user_name)
+            validcheck=open('userfile.txt', 'w')
+            validcheck.write(user_name)
             validcheck.close()
-            return redirect('/teacher')
+            return redirect('/student')
     form=AuthenticationForm()
     return render(request, 'login_form.html', {'form':form})
-
-def users(request):
-    form=AuthenticationForm(data=request.POST)
-    user=form.get_user()
-    return render(request, 'student_hw.html', {'user':user})

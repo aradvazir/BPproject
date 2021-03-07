@@ -6,7 +6,7 @@
                 <li>{{ foo2.date }}</li>
             {% endif %}
         {% endfor %}
-        <li><a href="{% url upload_answer %}" style="color: red"> upload your answer </a></li>
+        <li><a href="{% url 'upload_answer' %}" style="color: red"> upload your answer </a></li>
         {% for foo2 in answer %}
             {% if foo.hw_title == foo2.ans_title %}
                 <li> foo3.score </li>

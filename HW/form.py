@@ -8,4 +8,4 @@ class creat_hw (ModelForm):
 class creat_answer (ModelForm):
     class Meta :
         model= answer
-        fields= '__all__'
+        fields=['ans_title', 'student_nu', 'ans_file']
