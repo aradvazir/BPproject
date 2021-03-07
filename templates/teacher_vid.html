@@ -1,0 +1,7 @@
+{% for foo in video %}
+    <ul>
+    <h2><a href="{{ foo.file.url}}">{{ foo.title }}</a></h2>
+    <hr>
+    </ul>
+{% endfor %}
+<ul><a href="{% url 'upload_video' %}", style="colorc" >upload new video</a></ul>
