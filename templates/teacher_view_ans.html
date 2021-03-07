@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+{% for foo in Answer %}
+    <ul>
+        <li>{{ foo.student_nu }}</li>
+        <li>{{ foo.date }}</li>
+        <li><a href="{{ foo.ans_file.url }}">{{ foo.ans_file }}</a></li>
+        <li>{{ foo.score }}</li>
+    </ul>
+{% endfor %}

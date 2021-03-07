@@ -19,6 +19,7 @@ from django.conf.urls.static import static
 from django.conf import settings
 from VID.views import *
 from HW.views import *
+from login_page.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -33,5 +34,7 @@ urlpatterns = [
     path('teacher/homework/',upload_hw, name='teacher_homework'),
     path('teacher/homework/upload/',upload_hw,name='upload_homework'),
     path('teacher/homework/<str:hw_title>/', view_ans, name='view_answer'),
+    path('teacher/login/', teacher_login_view, name='teacher_login'),
+    path('student/login/', student_login_view, name='student_login'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
