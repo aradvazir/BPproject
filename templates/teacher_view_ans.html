@@ -1,8 +1,6 @@
 {% for foo in Answer %}
-    <ul>
-        <li>{{ foo.student_nu }}</li>
-        <li>{{ foo.date }}</li>
-        <li><a href="{{ foo.ans_file.url }}">{{ foo.ans_file }}</a></li>
-        <li>{{ foo.score }}</li>
-    </ul>
+        <h1>{{ foo.student_nu }}</h1>
+        <h1>{{ foo.date }}</h1>
+        <h1><a href="{{ foo.ans_file.url }}">{{ foo.ans_file }}</a></h1>
+        <h1>{{ foo.score }}</h1>
 {% endfor %}

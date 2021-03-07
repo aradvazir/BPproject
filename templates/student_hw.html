@@ -1,16 +1,14 @@
 {% for foo in hw %}
-    <ul>
-        <li><a href="{{ foo.hw_file.url }}">{{ foo }}</a></li>
+        <h1><a href="{{ foo.hw_file.url }}">{{ foo }}</a></h1>
         {% for foo2 in answer %}
             {% if foo.hw_title == foo2.ans_title %}
                 <li>{{ foo2.date }}</li>
             {% endif %}
         {% endfor %}
-        <li><a href="{% url 'upload_answer' %}" style="color: red"> upload your answer </a></li>
+        <h1><a href="{% url 'upload_answer' %}" style="color: red"> upload your answer </a></h1>
         {% for foo2 in answer %}
             {% if foo.hw_title == foo2.ans_title %}
                 <li> foo3.score </li>
             {% endif %}
         {% endfor %}
-    </ul>
 {% endfor %}

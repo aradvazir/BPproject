@@ -1,5 +1,5 @@
-<a href="{% url 'upload_homework' %}"> upload your homework </a>
+<h1><a href="{% url 'upload_homework' %}" style="color: red"> upload your homework </a></h1>
 {% for foo in hw %}
-         <h2><a href="{% url 'view_answer' foo.hw_title %}">{{ foo }}</a></h2>
+         <h1><a href="{% url 'view_answer' foo.hw_title %}" style="color: chartreuse">{{ foo }}</a></h1>
          <hr>
 {% endfor %}
